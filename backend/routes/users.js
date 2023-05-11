@@ -1,12 +1,11 @@
-const express = require('express');
-const router = express.Router();
-const { createUser, getUsers, getUserById, updateUser, deleteUser } = require('../controllers/userController');
+const express = require('express')
+const router = express.Router()
+const {createUser,getUser, updateUser,deleteUser,getUsers} = require('../controllers/userController')
 
-// Routes for user related operations
-router.post('/users', createUser);
-router.get('/users', getUsers);
-router.get('/users/:id', getUserById);
-router.put('/users/:id', updateUser);
-router.delete('/users/:id', deleteUser);
+router.post('/users',createUser)
+router.get('users/id:',getUser)
+router.put('/users/id:',updateUser)
+router.delete('/users/id:',deleteUser)
+router.get('/users',getUsers)
 
-module.exports = router;
+module.exports = router
